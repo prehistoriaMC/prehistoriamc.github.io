@@ -249,6 +249,14 @@ const RANK_ACCESS = {
   admin: ["usuario", "helper", "moderador", "admin"]
 };
 
+// Mapeo de nombres para mostrar
+const RANK_DISPLAY_NAMES = {
+  usuario: "Miembro",
+  helper: "Ayudante",
+  moderador: "Moderador",
+  admin: "Administrador"
+};
+
 // Inicialización cuando el DOM está cargado
 document.addEventListener('DOMContentLoaded', function() {
   // Referencias a elementos
@@ -279,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Actualizar texto del rango actual
     if (currentRank) {
-      currentRank.textContent = rank.charAt(0).toUpperCase() + rank.slice(1);
+      currentRank.textContent = RANK_DISPLAY_NAMES[rank] || rank.charAt(0).toUpperCase() + rank.slice(1);
     }
     
     // Aplicar filtros

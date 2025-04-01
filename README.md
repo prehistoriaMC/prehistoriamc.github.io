@@ -1,44 +1,26 @@
-# PrehistoriaMC - Sitio Web para GitHub Pages
+# PrehistoriaMC - Sitio Web Estático
 
-Este es el sitio web estático del servidor de Minecraft PrehistoriaMC, preparado para su despliegue en GitHub Pages.
-
-## Cómo desplegar en GitHub Pages
-
-1. Ejecuta el script `deploy-to-gh-pages.sh` para generar los archivos en la carpeta `gh-pages`:
-   ```bash
-   ./deploy-to-gh-pages.sh
-   ```
-
-2. Crea un nuevo repositorio en GitHub.
-
-3. Sube el contenido del directorio `gh-pages` a tu nuevo repositorio:
-   ```bash
-   cd gh-pages
-   git init
-   git add .
-   git commit -m "Primera versión del sitio web"
-   git remote add origin https://github.com/tu-usuario/tu-repositorio.git
-   git push -u origin main
-   ```
-
-4. En GitHub, ve a la página de configuración de tu repositorio (Settings), luego a la sección "Pages".
-
-5. En "Source", selecciona la rama `main` y la carpeta "/ (root)" y haz clic en "Save".
-
-6. Espera unos minutos a que GitHub despliegue tu sitio web. Una vez desplegado, aparecerá una URL del tipo: `https://tu-usuario.github.io/tu-repositorio/`.
+Este es el sitio web estático del servidor de Minecraft PrehistoriaMC. Ha sido diseñado para funcionar completamente sin servidor - sólo necesitas abrir los archivos HTML en cualquier navegador web.
 
 ## Características
 
 - Sitio web completamente estático que funciona sin servidor web
 - Diseño responsivo que se adapta a dispositivos móviles y de escritorio
 - Tema visual inspirado en Minecraft con toques prehistóricos
+- Navegación intuitiva entre páginas
 - Página de comandos con filtrado por rango y búsqueda
-- Páginas de información y reglas
+- Páginas de información y reglas con diseño atractivo
+
+## Cómo usar
+
+1. Descarga todos los archivos del sitio web
+2. Haz doble clic en `index.html` para abrir la página principal
+3. Navega por el sitio usando los enlaces en la barra de navegación
 
 ## Estructura de archivos
 
 ```
-/ (root)
+web-estatica/
 ├── index.html           # Página principal
 ├── comandos.html        # Documentación de comandos con filtros
 ├── info.html            # Información del servidor
@@ -49,13 +31,30 @@ Este es el sitio web estático del servidor de Minecraft PrehistoriaMC, preparad
 ├── js/
 │   ├── main.js          # JavaScript principal
 │   └── comandos.js      # JavaScript para la funcionalidad de comandos
-└── .nojekyll            # Archivo para evitar el procesamiento de Jekyll
+└── README.md            # Este archivo
 ```
 
 ## Modificación
 
 Si deseas modificar el sitio web:
 
-1. Realiza tus cambios en la carpeta `web-estatica`
-2. Ejecuta el script `deploy-to-gh-pages.sh` para generar una nueva versión en la carpeta `gh-pages`
-3. Sube los cambios a tu repositorio en GitHub
+- Para cambiar el contenido, edita los archivos HTML
+- Para ajustar estilos, modifica los archivos CSS
+- Para cambiar la funcionalidad, edita los archivos JavaScript
+
+### Añadir comandos
+
+Para añadir o editar comandos, modifica el array `COMMANDS` en el archivo `js/comandos.js`.
+
+## Navegadores compatibles
+
+El sitio web funciona en todos los navegadores modernos:
+- Chrome
+- Firefox
+- Safari
+- Edge
+- Opera
+
+## Créditos
+
+Desarrollado por Antoniosillon para PrehistoriaMC

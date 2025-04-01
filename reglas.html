@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reglas - Prehistoria MC</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Estilos específicos para la página de reglas */
+    .rules-container {
+      background-color: #3E2A16;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      border: 2px solid #8B4513;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem;
+    }
+    
+    .rules-section {
+      margin-bottom: 2rem;
+    }
+    
+    .rules-section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .rules-section h2 {
+      font-family: 'MinecraftFont', monospace;
+      color: #CD853F;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+    }
+    
+    .rules-section h2 i {
+      margin-right: 0.75rem;
+    }
+    
+    .rules-section p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+    
+    .rules-list {
+      counter-reset: rule-counter;
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .rule-item {
+      counter-increment: rule-counter;
+      margin-bottom: 1.5rem;
+      background-color: #5E2F0D;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      position: relative;
+    }
+    
+    .rule-item h3 {
+      font-family: 'MinecraftFont', monospace;
+      color: #F5DEB3;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .rule-item h3::before {
+      content: counter(rule-counter);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.5rem;
+      height: 1.5rem;
+      background-color: #CD853F;
+      color: #3E2A16;
+      border-radius: 0.25rem;
+      margin-right: 0.75rem;
+      font-weight: bold;
+      padding: 0 0.25rem;
+    }
+    
+    .rule-item p {
+      margin-bottom: 0.5rem;
+    }
+    
+    .rule-item ul {
+      margin-left: 2rem;
+    }
+    
+    .rule-item ul li {
+      margin-bottom: 0.25rem;
+    }
+    
+    .rules-highlight {
+      background-color: #A0522D;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid #FFD700;
+    }
+    
+    .rules-highlight h3 {
+      color: #F5DEB3;
+      margin-bottom: 0.5rem;
+      font-family: 'MinecraftFont', monospace;
+    }
+    
+    .rules-highlight p {
+      margin-bottom: 0;
+    }
+    
+    .rules-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    
+    .rules-table th {
+      background-color: #A0522D;
+      color: #F5DEB3;
+      text-align: left;
+      padding: 0.75rem;
+      border: 1px solid #8B4513;
+      font-family: 'MinecraftFont', monospace;
+    }
+    
+    .rules-table td {
+      padding: 0.75rem;
+      border: 1px solid #8B4513;
+      background-color: #5E2F0D;
+    }
+  </style>
+</head>
+<body class="minecraft-background">
+  <!-- Header -->
+  <header class="minecraft-header">
+    <div class="container">
+      <div style="display: flex; justify-content: flex-end; margin-bottom: 0.5rem;">
+        <a href="index.html" class="minecraft-btn" style="padding: 0.5rem 0.75rem; font-size: 0.875rem;">
+          <i class="fas fa-home"></i> Volver al inicio
+        </a>
+      </div>
+      <h1 class="text-center font-minecraft text-shadow">
+        <span style="color: #CD853F;">Prehistoria</span><span style="color: #F5DEB3;">MC</span>
+      </h1>
+      <p class="text-center font-minecraft mb-4">reglas</p>
+      
+      <nav class="navbar">
+        <a href="index.html" class="minecraft-btn">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a href="comandos.html" class="minecraft-btn">
+          <i class="fas fa-scroll"></i> Comandos
+        </a>
+        <a href="info.html" class="minecraft-btn">
+          <i class="fas fa-info-circle"></i> Información
+        </a>
+        <a href="reglas.html" class="minecraft-btn">
+          <i class="fas fa-gavel"></i> Reglas
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <div class="container">
+      <div class="rules-container">
+        <!-- Introducción -->
+        <section class="rules-section">
+          <h2><i class="fas fa-book"></i> Reglas del Servidor</h2>
+          <p>
+            Bienvenido a PrehistoriaMC. Para garantizar una experiencia agradable para todos los jugadores, hemos establecido un conjunto de reglas que todos deben seguir. El incumplimiento de estas reglas puede resultar en sanciones que van desde advertencias hasta baneos permanentes.
+          </p>
+          
+          <div class="rules-highlight">
+            <h3>Importante</h3>
+            <p>Al jugar en nuestro servidor, aceptas cumplir con todas estas reglas. La ignorancia de las reglas no es una excusa válida para incumplirlas.</p>
+          </div>
+        </section>
+        
+        <!-- Reglas generales -->
+        <section class="rules-section">
+          <h2><i class="fas fa-users"></i> Reglas Generales</h2>
+          
+          <ul class="rules-list">
+            <li class="rule-item">
+              <h3>Respeto mutuo</h3>
+              <p>Trata a todos los jugadores y al staff con respeto. No se tolerará el acoso, insultos, discriminación o comportamiento tóxico.</p>
+            </li>
+            
+            <li class="rule-item">
+              <h3>No hacer trampa</h3>
+              <p>Está prohibido el uso de cualquier mod, hack, cliente o programa que dé ventajas injustas, incluyendo pero no limitado a:</p>
+              <ul>
+                <li>X-ray</li>
+                <li>Fly hacks</li>
+                <li>Kill aura</li>
+                <li>Auto-click</li>
+                <li>Speed hacks</li>
+              </ul>
+            </li>
+            
+            <li class="rule-item">
+              <h3>No explotar bugs o glitches</h3>
+              <p>Si encuentras un bug o glitch en el servidor, repórtalo al staff. Usar bugs intencionalmente para obtener ventajas será sancionado.</p>
+            </li>
+            
+            <li class="rule-item">
+              <h3>No griefing</h3>
+              <p>Destruir o vandalizar las construcciones de otros jugadores está prohibido, incluso si no están protegidas. Respeta el trabajo de los demás.</p>
+            </li>
+            
+            <li class="rule-item">
+              <h3>No spamming</h3>
+              <p>No envíes mensajes repetitivos en el chat, no abuses de MAYÚSCULAS y no promociones otros servidores.</p>
+            </li>
+            
+            <li class="rule-item">
+              <h3>No robar</h3>
+              <p>Tomar ítems de cofres o bases de otros jugadores sin permiso está prohibido, incluso si no están protegidos.</p>
+            </li>
+            
+            <li class="rule-item">
+              <h3>Construcciones apropiadas</h3>
+              <p>No construyas estructuras ofensivas, inapropiadas o que causen lag al servidor.</p>
+            </li>
+            
+            <li class="rule-item">
+              <h3>No estafar</h3>
+              <p>Todas las transacciones y acuerdos entre jugadores deben ser honestos. Estafar a otros jugadores resultará en sanciones.</p>
+            </li>
+          </ul>
+        </section>
+        
+        <!-- Sanciones -->
+        <section class="rules-section">
+          <h2><i class="fas fa-gavel"></i> Sistema de Sanciones</h2>
+          
+          <p>Utilizamos un sistema progresivo de sanciones. La severidad dependerá de la gravedad de la infracción y del historial del jugador.</p>
+          
+          <table class="rules-table">
+            <thead>
+              <tr>
+                <th>Nivel</th>
+                <th>Sanción</th>
+                <th>Duración</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Advertencia verbal</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Advertencia oficial</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Mute (silenciamiento)</td>
+                <td>30 min - 24 horas</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Kick (expulsión temporal)</td>
+                <td>Inmediata</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Ban temporal</td>
+                <td>1 - 7 días</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Ban permanente</td>
+                <td>Permanente</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="rules-highlight">
+            <h3>Apelaciones</h3>
+            <p>Si crees que has sido sancionado injustamente, puedes apelar en nuestro servidor de Discord. Las apelaciones son revisadas por los administradores.</p>
+          </div>
+        </section>
+        
+        <!-- Reglas adicionales -->
+        <section class="rules-section">
+          <h2><i class="fas fa-exclamation-triangle"></i> Reglas Adicionales</h2>
+          
+          <h3 style="color: #F5DEB3; margin: 1rem 0 0.5rem 0; font-family: 'MinecraftFont', monospace;">PVP y Combate</h3>
+          <ul class="rules-list">
+            <li class="rule-item">
+              <h3>Zonas de PVP</h3>
+              <p>El PVP está permitido, pero sólo en las áreas designadas y eventos especiales. Está prohibido atacar a otros jugadores en áreas seguras como spawn o centros comerciales.</p>
+            </li>
+            
+            <li class="rule-item">
+              <h3>No Kill Farming</h3>
+              <p>Matar repetidamente al mismo jugador para farmear su inventario o experiencia está prohibido.</p>
+            </li>
+          </ul>
+          
+          <h3 style="color: #F5DEB3; margin: 1rem 0 0.5rem 0; font-family: 'MinecraftFont', monospace;">Economía</h3>
+          <ul class="rules-list">
+            <li class="rule-item">
+              <h3>No manipulación de precios</h3>
+              <p>Está prohibido manipular los precios del mercado acaparando recursos o usando múltiples cuentas para alterar la economía del servidor.</p>
+            </li>
+          </ul>
+          
+          <h3 style="color: #F5DEB3; margin: 1rem 0 0.5rem 0; font-family: 'MinecraftFont', monospace;">Construcción</h3>
+          <ul class="rules-list">
+            <li class="rule-item">
+              <h3>Distancia entre bases</h3>
+              <p>Mantén tu base a al menos 100 bloques de distancia de otras construcciones, a menos que tengas permiso del propietario.</p>
+            </li>
+            
+            <li class="rule-item">
+              <h3>Granjas y redstone</h3>
+              <p>Las granjas complejas y circuitos de redstone deben ser eficientes. Si se detecta que causan lag excesivo, el staff pedirá que se modifiquen o eliminen.</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="minecraft-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a href="comandos.html">
+          <i class="fas fa-scroll"></i> Comandos
+        </a>
+        <a href="info.html">
+          <i class="fas fa-info-circle"></i> Info
+        </a>
+        <a href="reglas.html">
+          <i class="fas fa-gavel"></i> Reglas
+        </a>
+        <a href="https://discord.gg/nrDzUmmK6a" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-discord"></i> Discord
+        </a>
+        <a href="https://www.tiktok.com/@prehistoriamc?_t=ZN-8uqxfmDx7Ha&_r=1" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
+      </div>
+      <div class="footer-info">
+        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 0.5rem;">
+          <div class="bone-float" style="font-size: 1.25rem; color: #CD853F;">🦴</div>
+        </div>
+        <p>&copy; <span class="current-year">2023</span> Prehistoria MC | Versión 1.21</p>
+        <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem;">Página hecha por Antoniosillon</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

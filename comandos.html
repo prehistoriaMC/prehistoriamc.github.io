@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comandos - Prehistoria MC</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/comandos.css">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="minecraft-background">
+  <!-- Header -->
+  <header class="minecraft-header">
+    <div class="container">
+      <div style="display: flex; justify-content: flex-end; margin-bottom: 0.5rem;">
+        <a href="index.html" class="minecraft-btn" style="padding: 0.5rem 0.75rem; font-size: 0.875rem;">
+          <i class="fas fa-home"></i> Volver al inicio
+        </a>
+      </div>
+      <h1 class="text-center font-minecraft text-shadow">
+        <span style="color: #CD853F;">Prehistoria</span><span style="color: #F5DEB3;">MC</span>
+      </h1>
+      <p class="text-center font-minecraft mb-4">comandos</p>
+      
+      <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+        <a href="https://discord.gg/nrDzUmmK6a" target="_blank" rel="noopener noreferrer" class="minecraft-btn">
+          <i class="fab fa-discord"></i> Discord
+        </a>
+        <a href="https://www.tiktok.com/@prehistoriamc?_t=ZN-8uqxfmDx7Ha&_r=1" target="_blank" rel="noopener noreferrer" class="minecraft-btn">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
+      </div>
+      
+      <div style="display: flex; justify-content: center; margin-top: 1rem;">
+        <div style="font-family: 'MinecraftFont', monospace; background-color: #5E2F0D; color: #F5DEB3; padding: 0.75rem; border-radius: 0.5rem; border: 2px solid #8B4513; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);">
+          <span style="font-size: 0.875rem; opacity: 0.8;">IP:</span> prhmc.aternos.me
+          <span style="opacity: 0.5; margin: 0 0.5rem;">•</span>
+          <span style="font-size: 0.875rem; opacity: 0.8;">Puerto:</span> 61413
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <div class="container">
+      <div class="commands-container">
+        <!-- Sidebar con filtros -->
+        <aside class="sidebar">
+          <div class="bone-float mb-2">
+            <span style="font-size: 1.5rem;">🦴</span>
+          </div>
+          <h2>Selecciona tu Rango</h2>
+          
+          <!-- Botones de rangos -->
+          <div class="rank-buttons">
+            <button class="rank-button active" data-rank="usuario">
+              <i class="fas fa-user"></i> Usuario
+            </button>
+            <button class="rank-button" data-rank="helper">
+              <i class="fas fa-hands-helping"></i> Helper
+            </button>
+            <button class="rank-button" data-rank="moderador">
+              <i class="fas fa-shield-alt"></i> Moderador
+            </button>
+            <button class="rank-button" data-rank="admin">
+              <i class="fas fa-crown"></i> Administrador
+            </button>
+          </div>
+          
+          <!-- Búsqueda -->
+          <h3>
+            <i class="fas fa-scroll text-[#F5DEB3] mr-2"></i>
+            Buscar Comandos
+          </h3>
+          <div class="search-container">
+            <div class="search-box">
+              <i class="search-icon fas fa-search"></i>
+              <input type="text" id="search-input" class="search-input" placeholder="Escribe el nombre del comando...">
+              <button id="clear-search" class="clear-search">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Selector de categorías (móvil) -->
+          <div class="category-select-container">
+            <h3>Categorías</h3>
+            <select id="category-jump" class="category-select">
+              <option value="">Saltar a categoría...</option>
+              <option value="teleport">Teletransporte</option>
+              <option value="economy">Economía</option>
+              <option value="protection">Protección</option>
+              <option value="chat">Chat</option>
+            </select>
+          </div>
+        </aside>
+        
+        <!-- Lista de comandos -->
+        <section class="commands-list">
+          <div class="commands-header">
+            <h2>
+              Comandos para <span id="current-rank">Usuario</span>
+            </h2>
+            <div class="commands-count">
+              Total: <span id="command-count">0</span> comandos
+            </div>
+          </div>
+          
+          <div class="commands-divider"></div>
+          
+          <!-- Contenedor donde se generan los comandos -->
+          <div id="commands-list">
+            <!-- Se generará dinámicamente con JS -->
+          </div>
+          
+          <!-- Mensaje cuando no hay resultados -->
+          <div id="no-results" class="no-results hidden">
+            <p>No se encontraron comandos para esta búsqueda</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="minecraft-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a href="comandos.html">
+          <i class="fas fa-scroll"></i> Comandos
+        </a>
+        <a href="info.html">
+          <i class="fas fa-info-circle"></i> Info
+        </a>
+        <a href="reglas.html">
+          <i class="fas fa-gavel"></i> Reglas
+        </a>
+        <a href="https://discord.gg/nrDzUmmK6a" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-discord"></i> Discord
+        </a>
+        <a href="https://www.tiktok.com/@prehistoriamc?_t=ZN-8uqxfmDx7Ha&_r=1" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
+      </div>
+      <div class="footer-info">
+        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 0.5rem;">
+          <div class="bone-float" style="font-size: 1.25rem; color: #CD853F;">🦴</div>
+        </div>
+        <p>&copy; <span class="current-year">2023</span> Prehistoria MC | Versión 1.21</p>
+        <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem;">Página hecha por Antoniosillon</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/comandos.js"></script>
+</body>
+</html>

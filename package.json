@@ -1,0 +1,17 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "Este es el sitio web estático del servidor de Minecraft PrehistoriaMC. Ha sido diseñado para funcionar completamente sin servidor - sólo necesitas abrir los archivos HTML en cualquier navegador web.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "serve-static": "^2.2.0"
+  }
+}

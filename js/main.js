@@ -22,7 +22,7 @@ function highlightCurrentPage() {
   const currentPath = window.location.pathname;
   const filename = currentPath.split('/').pop();
   
-  const navLinks = document.querySelectorAll('nav a, .footer-links a');
+  const navLinks = document.querySelectorAll('.navbar a, .footer-links a, .social-links a, nav a');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (
@@ -34,6 +34,16 @@ function highlightCurrentPage() {
       link.classList.add('active');
     }
   });
+  
+  // Actualizar el título de la página si existe
+  const pageTitle = document.getElementById('page-title');
+  if (pageTitle) {
+    if (filename === '' || filename === 'index.html') {
+      pageTitle.textContent = 'inicio';
+    } else {
+      pageTitle.textContent = filename.replace('.html', '');
+    }
+  }
 }
 
 // Función para mostrar notificaciones

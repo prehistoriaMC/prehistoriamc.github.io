@@ -108,7 +108,7 @@ main {
   margin-top: 2rem;
 }
 
-.footer-links {
+.footer-links, .social-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -116,7 +116,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.footer-links a {
+.footer-links a, .social-links a {
   display: inline-flex;
   align-items: center;
   background-color: #8B4513;
@@ -129,13 +129,24 @@ main {
   transition: all 0.2s;
 }
 
-.footer-links a:hover {
+.footer-links a:hover, .social-links a:hover {
   background-color: #A0522D;
   transform: translateY(-2px);
 }
 
-.footer-links a i {
+.footer-links a i, .social-links a i {
   margin-right: 0.5rem;
+}
+
+/* Estilos específicos para botones sociales */
+.social-btn {
+  background-color: #3E2A16;
+  border-color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.social-btn:hover {
+  background-color: #5E2F0D;
 }
 
 .footer-info {
@@ -213,6 +224,63 @@ main {
   display: inline-block;
 }
 
+/* Estilos para la tarjeta de IP del servidor */
+.server-ip-card {
+  background: linear-gradient(135deg, #A0522D, #8B4513);
+  color: #F5DEB3;
+  font-family: 'MinecraftFont', monospace;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 3px solid #5E2F0D;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.server-ip-card:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.server-ip-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.3) 3px, transparent 3px, transparent 6px);
+}
+
+.server-ip-card-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.server-ip-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.server-ip-label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.server-ip-value {
+  color: white;
+  letter-spacing: 0.5px;
+}
+
 /* Fondo con color sólido para Minecraft */
 .minecraft-background {
   position: relative;
@@ -231,7 +299,8 @@ main {
   }
   
   .navbar {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     width: 100%;
     padding: 0 1rem;
@@ -245,16 +314,32 @@ main {
   }
   
   .footer-links {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
   }
   
   .footer-links a {
     width: 100%;
     justify-content: center;
+    font-size: 0.8rem;
   }
   
   main {
     padding: 1rem 0.5rem;
+  }
+
+  /* Ajuste para el hueso grande en el index */
+  .bone-float.large-bone {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .navbar, .footer-links, .social-links {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -304,6 +389,67 @@ main {
   position: relative;
 }
 
+/* Estilos para el contenedor de decoraciones flotantes */
+.floating-decorations {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ocultar decoraciones flotantes en móviles */
+@media (max-width: 768px) {
+  .floating-decorations {
+    display: none;
+  }
+}
+
+/* Estilos para la tarjeta de instrucciones */
+.minecraft-btn-join {
+  background-color: rgba(139, 69, 19, 0.3);
+  border: 2px solid #8B4513;
+  border-radius: 6px;
+  color: #F5DEB3;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.minecraft-btn-join:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  border-color: #CD853F;
+}
+
+.minecraft-btn-join h3 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.minecraft-btn-join ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.minecraft-btn-join li {
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .minecraft-btn-join {
+    max-width: 90% !important;
+    padding: 0.75rem !important;
+  }
+  
+  .minecraft-btn-join ol {
+    padding-left: 1.25rem;
+  }
+  
+  .minecraft-btn-join li {
+    font-size: 0.9rem;
+  }
+}
+
 /* Estilos para la tarjeta de comandos */
 .command-card {
   background-color: #F5F5DC;
@@ -320,4 +466,69 @@ main {
   border-radius: 5px;
   padding: 1rem;
   margin-bottom: 1rem;
+}
+
+/* Botón especial de Discord destacado */
+.discord-btn-special {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5865F2; /* Color oficial de Discord */
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-family: 'MinecraftFont', monospace;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border: 2px solid #4752C4;
+  box-shadow: 0 5px 15px rgba(88, 101, 242, 0.4), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.3), 
+              0 0 20px rgba(88, 101, 242, 0.3);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.discord-btn-special::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+              rgba(255, 255, 255, 0) 0%, 
+              rgba(255, 255, 255, 0.1) 50%, 
+              rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.discord-btn-special:hover {
+  background-color: #4752C4;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 7px 20px rgba(88, 101, 242, 0.5), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.4), 
+              0 0 25px rgba(88, 101, 242, 0.5);
+}
+
+.discord-btn-special:hover::before {
+  transform: translateX(100%);
+}
+
+.discord-btn-special:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 3px 10px rgba(88, 101, 242, 0.3);
+}
+
+.discord-btn-special i {
+  margin-right: 0.75rem;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .discord-btn-special {
+    padding: 0.6rem 1.25rem;
+    font-size: 1rem;
+  }
 }

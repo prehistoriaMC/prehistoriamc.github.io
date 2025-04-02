@@ -137,34 +137,28 @@
 </head>
 <body class="minecraft-background">
   <!-- Header -->
-  <header class="minecraft-header">
-    <div class="container">
-      <div style="display: flex; justify-content: flex-end; margin-bottom: 0.5rem;">
-        <a href="index.html" class="minecraft-btn" style="padding: 0.5rem 0.75rem; font-size: 0.875rem;">
-          <i class="fas fa-home"></i> Volver al inicio
-        </a>
+  <div id="header-placeholder"></div>
+
+  <!-- Título y subtítulo de la página -->
+  <div class="container" style="text-align: center; margin-top: 1.5rem;">
+    <p class="text-center font-minecraft mb-4" id="page-title">reglas</p>
+    
+    <!-- IP del servidor en formato compacto -->
+    <div style="display: flex; justify-content: center; margin: 1rem 0;">
+      <div class="server-ip-card" style="padding: 0.5rem 1.25rem; transform: scale(0.9);">
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center;">
+          <div class="server-ip-item" style="margin-bottom: 0;">
+            <span class="server-ip-label">IP:</span> 
+            <span class="server-ip-value">prhmc.aternos.me</span>
+          </div>
+          <div class="server-ip-item" style="margin-bottom: 0;">
+            <span class="server-ip-label">Puerto:</span> 
+            <span class="server-ip-value">61413</span>
+          </div>
+        </div>
       </div>
-      <h1 class="text-center font-minecraft text-shadow">
-        <span style="color: #CD853F;">Prehistoria</span><span style="color: #F5DEB3;">MC</span>
-      </h1>
-      <p class="text-center font-minecraft mb-4">reglas</p>
-      
-      <nav class="navbar">
-        <a href="index.html" class="minecraft-btn">
-          <i class="fas fa-home"></i> Inicio
-        </a>
-        <a href="comandos.html" class="minecraft-btn">
-          <i class="fas fa-scroll"></i> Comandos
-        </a>
-        <a href="info.html" class="minecraft-btn">
-          <i class="fas fa-info-circle"></i> Información
-        </a>
-        <a href="reglas.html" class="minecraft-btn">
-          <i class="fas fa-gavel"></i> Reglas
-        </a>
-      </nav>
     </div>
-  </header>
+  </div>
 
   <!-- Contenido principal -->
   <main>
@@ -334,39 +328,10 @@
   </main>
 
   <!-- Footer -->
-  <footer class="minecraft-footer">
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">
-          <i class="fas fa-home"></i> Inicio
-        </a>
-        <a href="comandos.html">
-          <i class="fas fa-scroll"></i> Comandos
-        </a>
-        <a href="info.html">
-          <i class="fas fa-info-circle"></i> Info
-        </a>
-        <a href="reglas.html">
-          <i class="fas fa-gavel"></i> Reglas
-        </a>
-        <a href="https://discord.gg/nrDzUmmK6a" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-discord"></i> Discord
-        </a>
-        <a href="https://www.tiktok.com/@prehistoriamc?_t=ZN-8uqxfmDx7Ha&_r=1" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-tiktok"></i> TikTok
-        </a>
-      </div>
-      <div class="footer-info">
-        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 0.5rem;">
-          <div class="bone-float" style="font-size: 1.25rem; color: #CD853F;">🦴</div>
-        </div>
-        <p>&copy; <span class="current-year">2023</span> Prehistoria MC | Versión 1.21</p>
-        <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem;">Página hecha por Antoniosillon</p>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
 </body>
 </html>

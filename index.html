@@ -10,30 +10,10 @@
 </head>
 <body class="lava-background">
   <!-- Header -->
-  <header class="minecraft-header">
-    <div class="container">
-      <h1 class="text-center font-minecraft text-shadow">
-        <span style="color: #CD853F;">Prehistoria</span><span style="color: #F5DEB3;">MC</span>
-      </h1>
-      <nav class="navbar">
-        <a href="index.html" class="minecraft-btn">
-          <i class="fas fa-home"></i> Inicio
-        </a>
-        <a href="comandos.html" class="minecraft-btn">
-          <i class="fas fa-scroll"></i> Comandos
-        </a>
-        <a href="info.html" class="minecraft-btn">
-          <i class="fas fa-info-circle"></i> Información
-        </a>
-        <a href="reglas.html" class="minecraft-btn">
-          <i class="fas fa-gavel"></i> Reglas
-        </a>
-      </nav>
-    </div>
-  </header>
+  <div id="header-placeholder"></div>
 
-  <!-- Decoraciones flotantes -->
-  <div style="position: absolute; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
+  <!-- Decoraciones flotantes - solo visibles en dispositivos medianos y grandes -->
+  <div class="floating-decorations">
     <div class="bone-float" style="position: absolute; left: 15%; top: 20%; opacity: 0.1; font-size: 2.5rem;">🦴</div>
     <div class="bone-float" style="position: absolute; left: 80%; top: 30%; opacity: 0.1; font-size: 2.5rem;">🦴</div>
     <div class="bone-float" style="position: absolute; left: 25%; top: 70%; opacity: 0.1; font-size: 2.5rem;">🥚</div>
@@ -48,12 +28,8 @@
   <main>
     <div class="container">
       <div style="text-align: center; max-width: 800px; margin: 2rem auto; z-index: 10; position: relative;">
-        <!-- Logo decorativo -->
-        <div style="margin-bottom: 2rem;">
-          <div class="bone-float" style="font-size: 4rem; color: #CD853F;">
-            🦴
-          </div>
-        </div>
+        <!-- Espacio para margen superior -->
+        <div style="margin-bottom: 0.5rem;"></div>
         
         <h1 style="font-size: 2.5rem; margin-bottom: 1rem; font-family: 'MinecraftFont', monospace; letter-spacing: 2px;" class="text-shadow">
           <span style="color: #CD853F;">Prehistoria</span>
@@ -71,71 +47,39 @@
         </div>
       </div>
 
-      <!-- IP del servidor -->
-      <div style="margin-bottom: 2.5rem; text-align: center;">
-        <div style="background-color: #A0522D; color: #F5DEB3; font-family: 'MinecraftFont', monospace; padding: 1rem 1.5rem; border-radius: 0.5rem; border: 2px solid #8B4513; display: inline-block; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-          <div style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem; opacity: 0.8;">Conéctate ahora</div>
-          <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: center; align-items: center; justify-content: center;">
-            <div>
-              <span style="margin-right: 0.5rem; font-weight: bold;">IP:</span> 
-              <span style="color: white;">prhmc.aternos.me</span>
+      <!-- IP del servidor en formato compacto -->
+      <div style="display: flex; justify-content: center; margin: 1rem 0 1.5rem 0;">
+        <div class="server-ip-card" style="padding: 0.5rem 1.25rem;">
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center;">
+            <div class="server-ip-item" style="margin-bottom: 0;">
+              <span class="server-ip-label">IP:</span> 
+              <span class="server-ip-value">prhmc.aternos.me</span>
             </div>
-            <div>
-              <span style="margin-right: 0.5rem; font-weight: bold;">Puerto:</span> 
-              <span style="color: white;">61413</span>
+            <div class="server-ip-item" style="margin-bottom: 0;">
+              <span class="server-ip-label">Puerto:</span> 
+              <span class="server-ip-value">61413</span>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Botones de redes sociales -->
-      <div style="text-align: center; margin-bottom: 2rem;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto;">
-          <a href="https://discord.gg/nrDzUmmK6a" target="_blank" rel="noopener noreferrer" class="minecraft-btn" style="padding: 0.75rem 1.5rem; font-size: 1.1rem;">
-            <i class="fab fa-discord mr-2"></i> Discord
-          </a>
-          <a href="https://www.tiktok.com/@prehistoriamc?_t=ZN-8uqxfmDx7Ha&_r=1" target="_blank" rel="noopener noreferrer" class="minecraft-btn" style="padding: 0.75rem 1.5rem; font-size: 1.1rem;">
-            <i class="fab fa-tiktok mr-2"></i> TikTok
-          </a>
-        </div>
+      
+      <!-- Botón destacado de Discord -->
+      <div style="display: flex; justify-content: center; margin: 1rem 0 2.5rem 0;">
+        <a href="https://discord.gg/nrDzUmmK6a" target="_blank" rel="noopener noreferrer" class="discord-btn-special">
+          <i class="fab fa-discord"></i> Únete a nuestro Discord
+        </a>
       </div>
+
+      <!-- Espacio inferior -->
+      <div style="margin-bottom: 1rem;"></div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="minecraft-footer">
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">
-          <i class="fas fa-home"></i> Inicio
-        </a>
-        <a href="comandos.html">
-          <i class="fas fa-scroll"></i> Comandos
-        </a>
-        <a href="info.html">
-          <i class="fas fa-info-circle"></i> Info
-        </a>
-        <a href="reglas.html">
-          <i class="fas fa-gavel"></i> Reglas
-        </a>
-        <a href="https://discord.gg/nrDzUmmK6a" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-discord"></i> Discord
-        </a>
-        <a href="https://www.tiktok.com/@prehistoriamc?_t=ZN-8uqxfmDx7Ha&_r=1" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-tiktok"></i> TikTok
-        </a>
-      </div>
-      <div class="footer-info">
-        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 0.5rem;">
-          <div class="bone-float" style="font-size: 1.25rem; color: #CD853F;">🦴</div>
-        </div>
-        <p>&copy; <span class="current-year">2023</span> Prehistoria MC | Versión 1.21</p>
-        <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem;">Página hecha por Antoniosillon</p>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
 </body>
 </html>
